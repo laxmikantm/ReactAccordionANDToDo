@@ -9,7 +9,8 @@ function List(props) {
         () => props.handleChange(props.index)}>
         {props.question}
       </li>
-      {(props.currentIndex === props.index && <li className={isCurrent?"answer open":"answer"}>{isCurrent && <p>props.answer</p>}</li>)}     
+      {(props.currentIndex === props.index && 
+      <li className={isCurrent?"answer open":"answer"}>{isCurrent && <p>{props.answer}</p>}</li>)}     
     </ul>
   )
 }

@@ -4,8 +4,10 @@ import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import todosData from './components/todosData';
 import TODOITEM from './components/todoitem';
+// import CONTACT from './components/';
 import NavBar from './components/navbar';
 import { Toolbar, Typography } from '@material-ui/core';
+
 
 class App extends React.Component {
   constructor() {
@@ -82,6 +84,8 @@ class App extends React.Component {
       <br />
       <h2>{this.state.count}</h2>
       <button onClick={this.handleClick.bind(this)}>Count Button </button>
+      <br />
+      {/* <CONTACT /> */}
     </>
     )
   }

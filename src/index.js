@@ -34,11 +34,12 @@ import ToDoItem from './components/todoitem';
 //           <Link to='/contact'>Contact</Link>
 //         </li>
 //       </ul>
-
-//       <Route exact path='/' component={App1} />
-//       <Route exact path='users/:id' component={Users} />
-//       <Route path='/contact' component={Contact} />
-//       <Route component={NotFound} />
+//         <Switch>
+// //       <Route exact path='/' component={App1} />
+// //       <Route exact path='users/:id' component={Users} />
+// //       <Route path='/contact' component={Contact} />
+// //       <Route component={NotFound} />
+//         </ Switch>
 //     </div>
 //   </Router>
 // );

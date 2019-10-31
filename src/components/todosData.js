@@ -9,7 +9,7 @@ const todosData = [
         text: "Learn React Router",
         completed: false
     },
-    {
+            {
         id: 4,
         text: "Learn React LifeCycle",
         completed: false

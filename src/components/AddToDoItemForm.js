@@ -26,8 +26,14 @@ class AddToDoItemForm extends React.Component {
     this.state = {
       value: ''
     };
-    console.log(props);
   }
+
+  onClickEventFunction = e => {
+    e.preventDefault();
+    this.setState({
+      value: e.currentTarget.value
+    });
+  };
 
   render() {
     return (
@@ -53,7 +59,7 @@ class AddToDoItemForm extends React.Component {
                 margin="normal"
                 className={useStyles.TextField}
                 value={this.state.value}
-                floatingLabelText="Enter TO DO Item Here"
+                floatingLabelText="Please -> Enter TO DO Item Here"
                 onChange={e => {
                   this.setState({
                     value: e.target.value
@@ -62,14 +68,8 @@ class AddToDoItemForm extends React.Component {
               />
             </div>
 
-            {/* <Button variant="contained" color="primary" className={useStyles.button} onClick={this.props.handler.bind(this)}> */}
             <Button
-              onClick={e => {
-                e.preventDefault();
-                this.setState({
-                  value: e.targe.value
-                });
-              }}
+              onClick={this.onClickEventFunction}
               variant="contained"
               color="primary"
               className={useStyles.button}

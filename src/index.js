@@ -19,35 +19,46 @@ import * as serviceWorker from './serviceWorker';
 import ToDoItem from './components/todoitem';
 
 //////////Router Example////////
-//////////Router Example////////
-// const myRouting = (
-//   <Router>
-//     <div>
-//       <ul>
-//         <li>
-//           <Link to='/'>Home</Link>
-//         </li>
-//         <li>
-//           <Link to='/users'>Users</Link>
-//         </li>
-//         <li>
-//           <Link to='/contact'>Contact</Link>
-//         </li>
-//       </ul>
-//         <Switch>
-// //       <Route exact path='/' component={App1} />
-// //       <Route exact path='users/:id' component={Users} />
-// //       <Route path='/contact' component={Contact} />
-// //       <Route component={NotFound} />
-//         </ Switch>
-//     </div>
-//   </Router>
-// );
-//////////Router Example////////
+////////Router Example////////
+const myRouting = (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/users">Users</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+      <>
+        <Route exact path="/" component={App1} />
+        <Route exact path="users/:id" component={Users} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </>
+    </div>
+  </Router>
+);
+////////Router Example////////
 
 // ReactDOM.render(<Accordion />, document.getElementById('root'));
-// ReactDOM.render(<Jokes />, document.getElementById('root'));
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <>
+    <App />
+    <hr />
+    <Accordion />
+    <hr />
+    <Jokes />
+    <hr />
+    {myRouting}
+  </>,
+  document.getElementById('root')
+);
+// ReactDOM.render(<App />, document.getElementById('root'));
 // ReactDOM.render(myRouting, document.getElementById('root'));
 
 serviceWorker.unregister();

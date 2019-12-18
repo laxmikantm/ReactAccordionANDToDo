@@ -20,9 +20,10 @@ class LoginLogOut extends React.Component {
   render() {
     let buttonText = this.state.isLoggedIn ? 'Log OUT' : 'Log IN';
     return (
-      <div>
+      <>
+        <h5>Simple Toggle button using React State</h5>
         <button onClick={this.handleClick}>{buttonText}</button>
-      </div>
+      </>
     );
   }
 }

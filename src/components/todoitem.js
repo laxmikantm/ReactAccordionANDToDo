@@ -11,13 +11,10 @@ function ToDoItem(props) {
     textDecoration: 'line-through'
   };
 
-
   return (
-    <div className='todo-item'>
+    <div className="todo-item">
       <input
-        type='checkbox'
-        // onChange={itemClickedFunction}
-        // onChange={()=>console.log('Item clicked')}
+        type="checkbox"
         onChange={event => props.handleChange(props.item.id)}
         checked={props.item.completed}
       />

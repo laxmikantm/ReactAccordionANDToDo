@@ -90,23 +90,18 @@ class App extends React.Component {
       Material Ui Sytetic Stuff for AppBar and......
     */}
 
-        <div>
+        <>
           <AppBar color="primary" position="static">
             <Toolbar>
               <Typography variant="title" color="inherit">
-                My To Do List
+                LAXMI To Do - Learning Wishlist
               </Typography>
             </Toolbar>
           </AppBar>
-
           <NavBar />
-        </div>
+        </>
 
-        <br />
         <LOGINLOGOUTCOMP />
-        {/* 
-      Material Ui Sytetic Stuff......end..
-    */}
         <Conditional isLoading={this.state.isLoading} />
         <div className="todo-list">{todoItems}</div>
         <br />
@@ -115,6 +110,8 @@ class App extends React.Component {
             this.addItem(itemText);
           }}
         />
+        {/* Below CONSUMEAPI is just demostration of consuming Public API
+         */}
         <CONSUMEAPI />
         <br />
         <h2>{this.state.count}</h2>
